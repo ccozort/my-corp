@@ -1,0 +1,82 @@
+/* ############ THESE ARE PAGE ELEMENTS FOR PLACING CONTENT ETC. */
+h1{
+  color: white;
+}
+
+#player {
+  background-color: blue;
+  border: #3565e8 5px solid;
+}
+#cpu {
+  background-color: red;
+  border: #3565e8 5px solid;
+}
+
+
+.banner {
+  width: 100%;
+  height: 200px;
+  background-color: #2A4D70;
+  border: 25px;
+  /* margin: 10px; */
+}
+
+.navigation{
+  float: right;
+  width: 100%;
+  background-color: #A2CAF2;
+}
+
+.content {
+  float: right;
+  width: 100%;
+  height: 600px;
+  background-color: #59A5F0;
+}
+
+/* ############ THESE ARE COMPONENTS ON A PAGE */
+
+.mybutton {
+  background-color: #3565e8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  /* box-shadow: 5px 5px 5px grey; */
+  filter: drop-shadow(0 0 0.75rem grey);
+  border-radius: 5px;
+}
+/* this allows for a hover effect for the mybutton class... */
+.mybutton:hover {
+  background-color: #3e8e41;
+  transform: translateY(1px);
+  }
+
+
+/* RESPONSIVE CODE */
+/* this allows for responsive content based on screen dimensions */
+@media screen and (max-width: 897px) {
+  .banner,
+  .content {
+    background-color: red;
+    /* The width is 100%, when the viewport is 800px or smaller */
+    font-size: 50px;
+  }
+}
+
+/* Nested within another conditional at-rule */
+@supports (display: flex) {
+  @media screen and (max-width: 900px) {
+    article {
+      display: flex;
+    }
+    .banner {
+      background-color: purple;
+    }
+  }
+}
